@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiMart - Đồ Gia Dụng Tiện Ích</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root { --primary-color: #20c997; }
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Navbar */
+        .logo-rounded { width: 45px; height: 45px; object-fit: cover; border-radius: 50%; border: 2px solid var(--primary-color); }
+        .navbar { background-color: #ffffff !important; }
+        .brand-section { background: #fff; padding: 30px; border-radius: 15px; border: 1px solid #eee; }
+.brand-logo { 
+    opacity: 0.6; 
+    transition: 0.3s; 
+    filter: grayscale(100%); 
+    max-height: 40px; 
+    width: auto;
+}
+.brand-logo:hover { opacity: 1; filter: grayscale(0%); transform: scale(1.05); }
+        /* Sidebar Danh mục */
+        .category-sidebar { background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 20px; height: 100%; }
+        .category-item { padding: 12px 0; display: flex; align-items: center; color: #444; text-decoration: none; transition: 0.3s; border-bottom: 1px solid #f9f9f9; font-weight: 500; }
+        .category-item:hover { color: var(--primary-color); padding-left: 10px; }
+        .category-item i { margin-right: 12px; font-size: 1.2rem; }
+
+        /* Card Sản phẩm */
+        .card { border-radius: 15px; transition: 0.3s; border: none; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important; }
+        .card-img-top { height: 250px; object-fit: cover; }
+        
+        /* Banner & Bộ sưu tập */
+        .promo-banner { background: linear-gradient(135deg, var(--primary-color), #0d6efd); padding: 50px; border-radius: 20px; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+        .btn-outline-primary { width: 50px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#"><img src="logogd.png" alt="Logo" class="logo-rounded me-2"></a>
+        <div class="navbar-nav me-auto">
+            <a class="nav-link fw-bold text-dark" href="#">Trang chủ</a>
+            <a class="nav-link text-muted" href="#">Sản phẩm</a>
+        </div>
+        <form class="d-flex flex-grow-1 mx-4">
+            <div class="input-group">
+                <!-- Ví dụ dùng w-50 để thanh tìm kiếm chỉ chiếm nửa màn hình -->
+<form class="d-flex w-25 mx-auto">
+    <div class="input-group">
+        <input class="form-control" type="search" placeholder="Tìm kiếm sản phẩm...">
+        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+    </div>
+</form>
+            </div>
+        </form>
+        <div class="d-flex align-items-center">
+            <a class="nav-link mx-3" href="#"><i class="bi bi-cart3 fs-4"></i></a>
+            <a class="nav-link mx-3" href="#"><i class="bi bi-bell fs-4"></i></a>
+            <a class="nav-link" href="#"><i class="bi bi-person-circle fs-4"></i></a>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <div class="row g-4">
+        <div class="col-lg-3">
+            <div class="category-sidebar shadow-sm">
+                <h6 class="fw-bold text-danger mb-3"><i class="bi bi-list"></i> DANH MỤC SẢN PHẨM</h6>
+                <a href="#" class="category-item"><i class="bi bi-lightning"></i> Điện máy</a>
+                <a href="#" class="category-item"><i class="bi bi-house"></i> Đồ gia dụng</a>
+                <a href="#" class="category-item"><i class="bi bi-laptop"></i> Thiết bị điện tử</a>
+               <a href="#" class="category-item"><i class="bi bi-car-front"></i> Phụ kiện xe hơi</a>
+                <a href="#" class="category-item"><i class="bi bi-tools"></i> Công cụ & Dụng cụ</a>
+                <a href="#" class="category-item"><i class="bi bi-person"></i> Mẹ và Bé</a>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="promo-banner text-center shadow">
+                <h1 class="fw-bold">Khuyến Mãi Lớn DiMart!</h1>
+                <p>Ưu đãi 50% cho các thiết bị thông minh.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container my-5">
+    <div class="brand-section shadow-sm">
+        <h5 class="fw-bold mb-4" style="border-left: 5px solid #ffc107; padding-left: 10px;">THƯƠNG HIỆU NỔI BẬT</h5>
+        <div class="row row-cols-2 row-cols-md-6 g-4 text-center align-items-center">
+            <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Sunhouse_logo.svg" class="brand-logo" alt="Sunhouse"></div>
+            <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Panasonic_logo.svg" class="brand-logo" alt="Panasonic"></div>
+            <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Bosch_logo.svg" class="brand-logo" alt="Bosch"></div>
+            <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Lg_logo.svg" class="brand-logo" alt="LG"></div>
+            <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Philips_logo.svg" class="brand-logo" alt="Philips"></div>
+            <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" class="brand-logo" alt="Samsung"></div>
+        </div>
+    </div>
+</section>
+</section>
+
+<section class="container my-5">
+    <h3 class="mb-4">Sản Phẩm Bán Chạy</h3>
+    
+    <div class="row g-4">
+        
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100">
+                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="sp">
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">Máy Xay Sinh Tố 1</h6>
+                    <div class="mb-2 d-flex align-items-center gap-2 flex-wrap">
+    <span class="text-danger fw-bold fs-5">220.000đ</span>
+    
+    <span class="text-muted text-decoration-line-through small">330.000đ</span>
+    
+    <span class="badge bg-danger text-white small">-20%</span>
+</div>
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i></button>
+                        <button class="btn btn-primary flex-grow-1">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="col-md-3">
+            <div class="card shadow-sm h-100">
+                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="sp">
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">Máy Xay Sinh Tố Bản Cao Cấp 2</h6>
+                    <div class="mb-2 d-flex align-items-center gap-2 flex-wrap">
+                     <span class="text-danger fw-bold fs-5">400.000đ</span>
+    
+                    <span class="text-muted text-decoration-line-through small">500.000đ</span>
+    
+                    <span class="badge bg-danger text-white small">-20%</span>
+</div>
+                    
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i></button>
+                        <button class="btn btn-primary flex-grow-1">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="col-md-3">
+            <div class="card shadow-sm h-100">
+                <img src="to.png" class="card-img-top" alt="sp">
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">Quạt đứng Toshiba F-LSD10(H)VN</h6>
+                    
+
+             <div class="mb-2 d-flex align-items-center gap-2 flex-wrap">
+                 <span class="text-danger fw-bold fs-5">1.250.000đ</span>
+    
+                <span class="text-muted text-decoration-line-through small">2.250.000đ</span>
+    
+                <span class="badge bg-danger text-white small">-20%</span>
+</div>
+
+                    
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i></button>
+                        <button class="btn btn-primary flex-grow-1">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100">
+                <img src="ss.png" class="card-img-top" alt="sp">
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">Máy lạnh samsung cao cấp 1HP</h6>
+                    <div class="mb-2 d-flex align-items-center gap-2 flex-wrap">
+    <span class="text-danger fw-bold fs-5">7.600.000đ</span>
+    
+    <span class="text-muted text-decoration-line-through small">9.500.000đ</span>
+    
+    <span class="badge bg-danger text-white small">-20%</span>
+</div>
+                    
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i></button>
+                        <button class="btn btn-primary flex-grow-1">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div> </div> </section>
+<footer class="bg-light py-5 mt-5 border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h6 class="fw-bold mb-3">Tổng đài hỗ trợ</h6>
+                <p class="small text-muted mb-1"><strong>Phía Bắc & Trung</strong></p>
+                <p class="small mb-1">Mua hàng: <span class="text-primary">(033) 90 22 75</span></p>
+                <p class="small mb-3">Bảo hành: <span class="text-primary">(028) 38 333 222</span></p>
+                
+                <p class="small text-muted mb-1"><strong>Phía Nam</strong></p>
+                <p class="small mb-1">Mua hàng: <span class="text-primary">(028) 3833 6666</span></p>
+                <p class="small mb-3">Bảo hành: <span class="text-primary">(028) 38 333 222</span></p>
+                
+                <p class="small text-muted mb-0"><strong>Thời gian</strong></p>
+                <p class="small">8h - 19h (Thứ 2 - Thứ 6)<br>8h - 17h30 (Thứ 7, CN)</p>
+            </div>
+
+            <div class="col-md-3">
+                <h6 class="fw-bold mb-3">Hỗ trợ khách hàng</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Chính sách và Quy định chung</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Hướng dẫn thanh toán</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Chính sách Đổi - Trả hàng hóa</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Chính sách Bảo hành</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h6 class="fw-bold mb-3">Quản lý</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Tra cứu đơn hàng</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Quản lý giỏ hàng</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h6 class="fw-bold mb-3">Về chúng tôi</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Giới thiệu</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2 text-center">
+                <h6 class="fw-bold mb-3">Kết nối với chúng tôi</h6>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="text-dark"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-youtube fs-4"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-tiktok fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
